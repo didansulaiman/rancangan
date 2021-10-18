@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Perhitungan Depresiasi</title>
+ 
+ <style>
+
+  form{
+   
+   padding: 20%;
+   margin:auto;
+  
+  }
+  .op{
+      width: 300px;
+      height: 20px;
+      margin-left: 50px;
+      padding-bottom: 10px;
+      
+      
+  }
+  
+  .ui{
+    background-color: rgb(104, 173, 252);
+    font-weight: bold;
+    width: 65%;
+  }
+  .btn{
+    color: white;
+    background-color: rgb(76, 223, 76);
+    width: 100px;
+    height: 40px;
+    margin-left: 40px;
+
+  }
+  .btn2{
+      color: white;
+      background-color: rgb(241, 94, 94);
+      width: 100px;
+    height: 40px;
+  }
+  .i1{
+    padding-bottom: 20px;
+  }
+  .i2{
+    padding-bottom: 20px;
+  }
+  .i3{
+    padding-bottom: 20px;
+  }
+  .container{
+      display: flex;
+  }
+  .iu{
+      background-color:  rgb(104, 173, 252);
+      width: 35%;
+
+  }
+  h2{
+      font-size: 50px;
+      font-weight: bold;
+      color: white;
+      margin: 20px;
+      margin-top: 150px;
+  }
+ </style>
+
+</head>
+<body>
+<div class="container">
+<div class="iu">
+    <h2>Menghitung Depresiasi dengan Methode Garis Lurus</h2>
+</div>
+<div class="ui">
+    
+
+ <form name="form" align="right" >
+  <div class="i1">
+  <label>Nilai Perolehan</label>
+  <input class="op" type="text" name="Perolehan" size="3"><br></div> 
+  <div class="i2"> 
+  <label>Nilai regulasi</label>
+  <input class="op"type="text" name="regulasi" size="3"><br></div> 
+  <div class="i3">
+  <label>Usia Ekonomis</label>
+  <input class="op" type="text" name="Usia" size="3"><br> </div>
+  <label>Hasil</label>
+  <input class="op" type="text" name="hasil" size="6" value=""><br><br><br>
+  <input class="btn2"type="reset"  onclick="clear()" value="Bersihkan">
+  <input class="btn"type="button" onclick="hitung()" value="Hitung">
+  
+  
+ </form>
+</div>
+</div>
+<!-- javascript -->
+ <script>
+  function cek(){
+   if (form.Perolehan.value == "" || form.regulasi.value == "" || form.Usia.value== "") {
+    alert("Angka Kosong");
+    exit
+   }
+  }
+  function hitung(){
+   cek();
+   a = parseInt(form.Perolehan.value);
+   b = parseInt(form.regulasi.value);
+   c = parseInt(form.Usia.value)
+   form.hasil.value = (a-b)/c;
+  }
+  
+
+ </script>
+</body>
+</html>
